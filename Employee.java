@@ -38,7 +38,7 @@ public class Employee {
 
     public void hire() {
         this.hired = !this.hired;
-        System.out.println("Person " + person.getName() + " " + person.getSurname() + (this.hired ? "hired" : "fired"));
+        System.out.println("Person " + person.getName() + " " + person.getSurname() + (this.hired ? " hired" : " fired"));
     }
 
     public boolean isHired() {
