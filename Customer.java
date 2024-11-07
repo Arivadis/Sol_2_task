@@ -2,10 +2,14 @@ public class Customer {
 
     private int id;
     private Person person;
-    private String device;
+    private Device device;
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Person getPerson() {
@@ -16,11 +20,11 @@ public class Customer {
         this.person = person;
     }
 
-    public String getDevice() {
+    public Device getDevice() {
         return device;
     }
 
-    public void setDevice(String device) {
+    public void setDevice(Device device) {
         this.device = device;
     }
 }

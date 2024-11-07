@@ -4,16 +4,22 @@ import java.util.List;
 public class RepairService {
 
     private String name;
-    private List<Employee> employes;
+    private final List<Employee> employes;
     private String profile;
     private Employee teamLead;
+    private final List<RepairOrder> repairOrders;
+    private int totalRepaired;
 
-    public RepairService(String name, String profile, Employee teamLead) {
+    public RepairService() {
+        employes = new ArrayList<>();
+        repairOrders = new ArrayList<>();
+    }
+
+    public RepairService(String name, String profile) {
         this.name = name;
         this.profile = profile;
-        this.teamLead = teamLead;
         employes = new ArrayList<>();
-        employes.add(teamLead);
+        repairOrders = new ArrayList<>();
     }
 
     public String getName() {
@@ -55,5 +61,21 @@ public class RepairService {
 
     public void setTeamLead(Employee teamLead) {
         this.teamLead = teamLead;
+    }
+
+    public List<RepairOrder> getRepairOrders() {
+        return repairOrders;
+    }
+
+    public void addRepairOrder(RepairOrder repairOrder) {
+        repairOrders.add(repairOrder);
+    }
+
+    public int getTotalRepaired() {
+        return totalRepaired;
+    }
+
+    public void addRepairedCount() {
+        totalRepaired++;
     }
 }

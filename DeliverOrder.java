@@ -2,9 +2,9 @@ import java.time.LocalDate;
 
 public class DeliverOrder {
 
-    String address;
-    Double weight;
-    LocalDate deliveryDay;
+    private String address;
+    private Double weight;
+    private LocalDate deliveryDay;
 
     public Double getWeight() {
         return weight;

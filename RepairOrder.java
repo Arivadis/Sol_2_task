@@ -1,5 +1,6 @@
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 public class RepairOrder {
@@ -12,11 +13,13 @@ public class RepairOrder {
     private RepairType repairType;
     private BigDecimal estimateCost = BigDecimal.ZERO;
     private DeliverOrder deliverOrder;
-    private List<PartsOrder> partsOrders;
+    private final List<PartsOrder> partsOrders;
+    private boolean isComplete;
 
     public RepairOrder(int repairId) {
         this.repairId = repairId;
         orderDay = LocalDateTime.now();
+        partsOrders = new ArrayList<>();
     }
 
     public int getRepairId() {
@@ -82,4 +85,21 @@ public class RepairOrder {
     public void addPartsOrder(PartsOrder partsOrder) {
         partsOrders.add(partsOrder);
     }
+
+    public boolean getIsComplete() {
+        return isComplete;
+    }
+
+    public void setIsComplete() {
+        isComplete = !isComplete;
+    }
+
+    public void doRepair(Employee master) {
+        System.out.println(master + "is working on the device");
+    }
+
+    public void orderingParts(int orderId) {
+        System.out.println("Ordering parts for ID" + orderId);
+    }
+
 }

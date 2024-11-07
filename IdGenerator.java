@@ -1,22 +1,23 @@
 public class IdGenerator {
-    private int idCount = 0;
-    private int custIdCount = 0;
-    private int repairId = 0;
-    private int partsOrder = 0;
 
-    public int newEmpId(int year) {
+    private Integer idCount = 0;
+    private Integer custIdCount = 0;
+    private Integer repairId = 0;
+    private Integer partsOrder = 0;
+
+    public Integer newEmpId(Integer year) {
         return Integer.parseInt(year + String.valueOf(++idCount));
     }
 
-    public int newCustId(int year) {
-        return Integer.parseInt(year + "00000" + ++custIdCount);
+    public Integer newCustId(Integer year) {
+        return Integer.parseInt(year + "00" + ++custIdCount);
     }
 
-    public int repairOrdId(int custId) {
+    public Integer repairOrdId(Integer custId) {
         return Integer.parseInt(String.valueOf(custId) + ++repairId);
     }
 
-    public int partsOrdId(int repOrdId) {
+    public Integer partsOrdId(Integer repOrdId) {
         return Integer.parseInt(String.valueOf(repOrdId) + ++partsOrder);
     }
 }

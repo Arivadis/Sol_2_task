@@ -1,5 +1,6 @@
 public class Device {
-    private Integer imei;
+
+    private long imei;
     private String made;
     private String model;
 
@@ -7,17 +8,17 @@ public class Device {
 
     }
 
-    public Device(Integer imei, String made, String model) {
+    public Device(long imei, String made, String model) {
         this.imei = imei;
         this.model = model;
         this.made = made;
     }
 
-    public Integer getImei() {
+    public long getImei() {
         return imei;
     }
 
-    public void setImei(Integer imei) {
+    public void setImei(long imei) {
         this.imei = imei;
     }
 
@@ -25,7 +26,7 @@ public class Device {
         return made;
     }
 
-    public void setMade( String made) {
+    public void setMade(String made) {
         this.made = made;
     }
 

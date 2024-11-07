@@ -6,6 +6,7 @@ public class Employee {
     private boolean hired;
 
     public Employee() {
+
     }
 
     public Employee(int id, Person person, JobPosition position) {

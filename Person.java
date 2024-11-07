@@ -1,4 +1,5 @@
 public class Person {
+
     private String name;
     private String surname;
     private int age;
@@ -10,6 +11,9 @@ public class Person {
     }
 
     public Person(String name, String surname, int age) {
+        if (age < 0 || age > 150) {
+            throw new IllegalArgumentException("Age can not be less 0 or more 150");
+        }
         this.name = name;
         this.surname = surname;
         this.age = age;

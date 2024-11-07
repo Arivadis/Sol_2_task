@@ -1,8 +1,12 @@
 public class RepairType {
 
-    Employee master;
-    String whatBroken;
-    String comments;
+    private Employee master;
+    private String whatBroken;
+    private String comments;
+
+    public RepairType() {
+
+    }
 
     public Employee getMaster() {
         return master;
