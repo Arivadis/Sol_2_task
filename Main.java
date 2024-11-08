@@ -47,13 +47,13 @@ public class Main {
         repairOrder1.setRepairType(repairType);
         repairService.addRepairOrder(repairOrder1);
 
-        PartsOrder partsOrder1 = new PartsOrder(idGenerator.partsOrdId(repairOrder1.getRepairId()));
+        PartsOrder partsOrder1 = new PartsOrder(idGenerator.partsOrdId(repairOrder1.getId()));
         partsOrder1.setCost(new BigDecimal("50.00"));
         partsOrder1.setWarehouse("Warsaw");
         partsOrder1.addParts("Screen " + device1.getMade() + " " + device1.getModel());
         repairOrder1.addPartsOrder(partsOrder1);
 
-        repairOrder1.orderingParts(repairOrder1.getRepairId());
+        repairOrder1.orderingParts(repairOrder1.getId());
         repairOrder1.doRepair(repairOrder1.getRepairType().getMaster());
         repairOrder1.setIsComplete();
         repairOrder1.setRepairedDay(LocalDateTime.now());

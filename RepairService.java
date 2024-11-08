@@ -7,19 +7,19 @@ public class RepairService {
     private final List<Employee> employes;
     private String profile;
     private Employee teamLead;
-    private final List<RepairOrder> repairOrders;
+    private final List<RepairOrder> orders;
     private int totalRepaired;
 
     public RepairService() {
         employes = new ArrayList<>();
-        repairOrders = new ArrayList<>();
+        orders = new ArrayList<>();
     }
 
     public RepairService(String name, String profile) {
         this.name = name;
         this.profile = profile;
         employes = new ArrayList<>();
-        repairOrders = new ArrayList<>();
+        orders = new ArrayList<>();
     }
 
     public String getName() {
@@ -63,12 +63,12 @@ public class RepairService {
         this.teamLead = teamLead;
     }
 
-    public List<RepairOrder> getRepairOrders() {
-        return repairOrders;
+    public List<RepairOrder> getOrders() {
+        return orders;
     }
 
     public void addRepairOrder(RepairOrder repairOrder) {
-        repairOrders.add(repairOrder);
+        orders.add(repairOrder);
     }
 
     public int getTotalRepaired() {

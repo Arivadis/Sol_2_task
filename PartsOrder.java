@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PartsOrder {
 
-    private int orderId;
+    private int id;
     private String warehouse;
     private BigDecimal cost;
     private final List<String> parts = new ArrayList<>();
@@ -13,12 +13,12 @@ public class PartsOrder {
 
     }
 
-    public PartsOrder(int orderId) {
-        this.orderId = orderId;
+    public PartsOrder(int id) {
+        this.id = id;
     }
 
-    public int getOrderId() {
-        return orderId;
+    public int getId() {
+        return id;
     }
 
     public String getWarehouse() {

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class RepairOrder {
 
-    private final int repairId;
+    private final int id;
     private final LocalDateTime orderDay;
     private LocalDateTime repairedDay;
     private Customer customer;
@@ -17,13 +17,13 @@ public class RepairOrder {
     private boolean isComplete;
 
     public RepairOrder(int repairId) {
-        this.repairId = repairId;
+        this.id = repairId;
         orderDay = LocalDateTime.now();
         partsOrders = new ArrayList<>();
     }
 
-    public int getRepairId() {
-        return repairId;
+    public int getId() {
+        return id;
     }
 
     public LocalDateTime getOrderDay() {

@@ -4,23 +4,23 @@ import java.util.List;
 
 public class RepCorp {
 
-    private String corpName;
+    private String name;
     private String address;
     private BigDecimal initCapital;
     private final List<RepairService> services;
 
     public RepCorp(String corpName, BigDecimal initCapital) {
-        this.corpName = corpName;
+        this.name = corpName;
         this.initCapital = initCapital;
         services = new ArrayList<>();
     }
 
     public String getCorpName() {
-        return corpName;
+        return name;
     }
 
     public void setCorpName(String corpName) {
-        this.corpName = corpName;
+        this.name = corpName;
     }
 
     public String getAddress() {
